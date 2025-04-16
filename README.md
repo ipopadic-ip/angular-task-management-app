@@ -24,5 +24,10 @@ This project was created as a part of a coursework assignment using Angular fram
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/angular-task-management-app.git
+   git clone https://github.com/ipopadic-ip/angular-task-management-app.git
    cd angular-task-management-app
+
+2. Install dependencies:
+   ```bash
+   npm install
+
