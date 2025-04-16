@@ -1,0 +1,101 @@
+{
+  "permissions": {},
+  "univerzitet": {
+    "id": 1,
+    "naziv": "Univerzitet Dunav",
+    "lokacija": "Beograd, Srbija",
+    "kontakt": "kontakt@dunav.edu.rs",
+    "telefon": "+381 11 123456",
+    "opis": "Univerzitet Dunav je savremeni univerzitet fokusiran na inovacije u obrazovanju i nauci.",
+    "slika": "assets/images/poz1.jpeg",
+    "rektor": {
+      "ime": "Prof. Dr. Sreten Milutinović",
+      "titula": "Rektor Univerziteta",
+      "opis": "Stručnjak u oblasti IT-a sa bogatim naučnim radom.",
+      "slika": "assets/images/profa1.jpeg"
+    }
+  },
+  "fakulteti": [
+    {
+      "id": 1,
+      "naziv": "Fakultet informacionih tehnologija",
+      "lokacija": "Novi Sad",
+      "kontakt": "fit@dunav.edu.rs",
+      "telefon": "+381 21 123456",
+      "opis": "Fakultet specijalizovan za softversko inženjerstvo i računarske nauke.",
+      "slika": "assets/images/fakultet_informatike.jpg",
+      "dekan": {
+        "ime": "Dr. Marko Petrović",
+        "titula": "Dekan",
+        "opis": "Ekspert za računarske mreže.",
+        "slika": "assets/images/dekan1.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "naziv": "Fakultet menadžmenta",
+      "lokacija": "Beograd",
+      "kontakt": "fm@dunav.edu.rs",
+      "telefon": "+381 11 654321",
+      "opis": "Fakultet koji nudi programe iz oblasti menadžmenta i ekonomije.",
+      "slika": "assets/images/fakultet_informatike.jpg",
+      "dekan": {
+        "ime": "Dr. Ivana Simić",
+        "titula": "Dekan",
+        "opis": "Stručnjak za finansijski menadžment.",
+        "slika": "assets/images/dekan2.jpg"
+      }
+    }
+  ],
+  "studijskiProgrami": [
+    {
+      "id": 1,
+      "naziv": "Informacione Tehnologije",
+      "opis": "Program fokusiran na razvoj softverskih rešenja.",
+      "fakultetId": 1,
+      "rukovodilac": {
+        "ime": "Dr. Jelena Jovanović",
+        "titula": "Rukovodilac programa",
+        "opis": "Stručnjak za baze podataka.",
+        "slika": "assets/images/jelena.jpg"
+      },
+      "predmeti": [
+        {
+          "naziv": "Uvod u programiranje",
+          "silabus": "assets/silabusi/uvod-programiranje.pdf",
+          "materijali": [
+            "assets/materijali/programiranje1.pdf",
+            "assets/materijali/programiranje2.pdf"
+          ]
+        },
+        {
+          "naziv": "Baze podataka",
+          "silabus": "assets/silabusi/baze.pdf",
+          "materijali": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "naziv": "Menadžment u sportu",
+      "opis": "Program koji spaja sport i ekonomiju.",
+      "fakultetId": 2,
+      "rukovodilac": {
+        "ime": "Dr. Milan Nikolić",
+        "titula": "Rukovodilac programa",
+        "opis": "Specijalista za sportski menadžment.",
+        "slika": "assets/images/milan.jpg"
+      },
+      "predmeti": [
+        {
+          "naziv": "Osnove menadžmenta",
+          "silabus": "assets/silabusi/menadzment.pdf",
+          "materijali": [
+            "assets/materijali/menadzment1.pdf"
+          ]
+        }
+      ]
+    }
+  ],
+  "korisnici": []
+}

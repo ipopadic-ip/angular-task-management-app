@@ -1,0 +1,21 @@
+<form [formGroup]="angazovanaOsobaForm" (ngSubmit)="submit()">
+    <label for="pocetak">Početak:</label>
+    <input id="pocetak" type="date" formControlName="pocetak" required />
+  
+    <label for="kraj">Kraj:</label>
+    <input
+      id="kraj"
+      type="date"
+      formControlName="kraj"
+      required
+      [disabled]="angazovanaOsobaForm.get('kraj')?.disabled ?? false"
+      [ngClass]="{'error': angazovanaOsobaForm.hasError('datumNeispravan')}"
+    />
+  
+    <div class="error-message" *ngIf="angazovanaOsobaForm.hasError('datumNeispravan')">
+      Datum kraja ne može biti pre datuma početka!
+    </div>
+  
+    <button class="btn btn-save" type="submit" [disabled]="angazovanaOsobaForm.invalid">Sačuvaj</button>
+  </form>
+  

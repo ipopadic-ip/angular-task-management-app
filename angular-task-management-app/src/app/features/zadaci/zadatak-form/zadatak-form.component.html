@@ -1,0 +1,19 @@
+<form [formGroup]="zadatakForm" (ngSubmit)="submit()">
+    <label for="naziv">Naziv:</label>
+    <input id="naziv" type="text" formControlName="naziv" required />
+  
+    <label for="opis">Opis:</label>
+    <input id="opis" type="text" formControlName="opis" required />
+  
+    <label for="rok">Rok:</label>
+    <input id="rok" type="date" formControlName="rok" required />
+  
+    <label for="prioritet">Prioritet:</label>
+    <input id="prioritet" type="number" formControlName="prioritet" required />
+  
+    <label for="status">Status:</label>
+    <input id="status" type="number" formControlName="status" step="0.1" min="0" max="1" required />
+  
+    <button class="btn btn-save" type="submit">Sačuvaj</button>
+  </form>
+  

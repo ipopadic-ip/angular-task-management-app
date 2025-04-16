@@ -1,0 +1,12 @@
+<div class="color-picker">
+    <label for="boja">Izaberite boju:</label>
+    <input id="boja" type="color" [(ngModel)]="boja" />
+</div>
+
+<div class="status-container">
+    <div *ngFor="let popunjen of kvadrati" 
+         class="kvadrat" 
+         [ngStyle]="{'background-color': popunjen ? boja : '#ccc'}">
+    </div>
+</div>
+  

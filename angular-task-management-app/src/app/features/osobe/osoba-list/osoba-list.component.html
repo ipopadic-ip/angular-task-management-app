@@ -1,0 +1,27 @@
+<table class="osobe-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Email</th>
+        <th>Akcije</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let osoba of osobe">
+        <td>{{ osoba.id }}</td>
+        <td>{{ osoba.ime }}</td>
+        <td>{{ osoba.prezime }}</td>
+        <td>{{ osoba.email }}</td>
+        <td>
+          <button class="btn btn-delete" (click)="obrisiOsobu(osoba.id)">Obriši</button>
+          <button class="btn btn-edit" (click)="azurirajOsobu(osoba)">Ažuriraj</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button class="btn btn-add" (click)="dodajOsobu()">Dodaj Osobu</button>
+  
+  <app-osoba-form *ngIf="prikaziFormu" [osoba]="trenutnaOsoba" (sacuvaj)="sacuvajOsobu($event)"></app-osoba-form>

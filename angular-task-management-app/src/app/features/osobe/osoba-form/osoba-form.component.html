@@ -1,0 +1,12 @@
+<form [formGroup]="osobaForm" (ngSubmit)="submit()">
+    <label for="ime">Ime:</label>
+    <input id="ime" type="text" formControlName="ime" required />
+  
+    <label for="prezime">Prezime:</label>
+    <input id="prezime" type="text" formControlName="prezime" required />
+  
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" required />
+  
+    <button class="btn btn-save" type="submit">Sačuvaj</button>
+  </form>

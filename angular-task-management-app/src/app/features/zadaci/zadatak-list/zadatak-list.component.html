@@ -1,0 +1,44 @@
+<div class="color-picker">
+  <label for="globalBoja">Izaberite globalnu boju:</label>
+  <input id="globalBoja" type="color" [(ngModel)]="globalBoja" />
+</div>
+
+<table class="zadaci-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Naziv</th>
+        <th>Opis</th>
+        <th>Rok</th>
+        <th>
+            Prioritet
+            <button (click)="sortirajPoPrioritetu()">Sortiraj</button>
+        </th>
+        <!-- <th>Prioritet</th> -->
+        <th>Status</th>
+        <th>Akcije</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let zadatak of zadaci">
+        <td>{{ zadatak.id }}</td>
+        <td>{{ zadatak.naziv }}</td>
+        <td>{{ zadatak.opis }}</td>
+        <td>{{ zadatak.rok | date:'dd.MM.yyyy' }}</td>
+        <td>{{ zadatak.prioritet }}</td>
+        <!-- <td>{{ zadatak.status }}</td> -->
+        <td>
+            <app-zadatak-status [status]="zadatak.status" [boja]="globalBoja"></app-zadatak-status>
+        </td>
+        <td>
+          <button class="btn btn-delete" (click)="obrisiZadatak(zadatak.id)">Obriši</button>
+          <button class="btn btn-edit" (click)="azurirajZadatak(zadatak)">Ažuriraj</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button class="btn btn-add" (click)="dodajZadatak()">Dodaj Zadatak</button>
+  
+  <app-zadatak-form *ngIf="prikaziFormu" [zadatak]="trenutniZadatak" (sacuvaj)="sacuvajZadatak($event)"></app-zadatak-form>
+  

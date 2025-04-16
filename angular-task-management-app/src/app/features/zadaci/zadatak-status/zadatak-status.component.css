@@ -1,0 +1,15 @@
+.status-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+.kvadrat {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.color-picker {
+  margin-bottom: 10px;
+}
+  

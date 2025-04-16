@@ -1,0 +1,28 @@
+<table class="angazovane-osobe-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Početak</th>
+        <th>Kraj</th>
+        <th>Akcije</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let angazovanaOsoba of angazovaneOsobe">
+        <td>{{ angazovanaOsoba.id }}</td>
+        <td>{{ angazovanaOsoba.pocetak | date }}</td>
+        <td>{{ angazovanaOsoba.kraj | date }}</td>
+        <td>
+          <button class="btn btn-edit" (click)="azurirajAngazovanuOsobu(angazovanaOsoba)">Ažuriraj</button>
+          <button class="btn btn-delete" (click)="obrisiAngazovanuOsobu(angazovanaOsoba.id)">Obriši</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button class="btn btn-add" (click)="dodajAngazovanuOsobu()">Dodaj Angažovanu Osobu</button>
+  
+  <app-angazovana-osoba-form *ngIf="prikaziFormu" [angazovanaOsoba]="trenutnaAngazovanaOsoba" 
+    (sacuvaj)="sacuvajAngazovanuOsobu($event)">
+  </app-angazovana-osoba-form>
+  
