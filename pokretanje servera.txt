@@ -5,5 +5,3 @@ npm install
 node index.js
 
 angular: ng add @angular/material
-
-molim te mi sada daj kod kao i za klijente ali za racune. daj mi kod i za service i za model i za racuni komponent i sta da dodam u app routes ts. racun ima od podataka: id Long, brojRacuna String, stanje Double. u bazi izgleda ovako:
